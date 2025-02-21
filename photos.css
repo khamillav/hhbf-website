@@ -16,7 +16,7 @@ nav{
     justify-content: space-between;
 }
 nav .logo{
-    width: 120px;
+    width: 60px;
     margin-right: 50px;
     cursor: pointer;
 }
@@ -37,7 +37,7 @@ nav ul{
 nav ul li{
     list-style: none;
     display: inline-block;
-    margin: 10px 30px;
+    margin: 1% 3%;
 }
 
 nav ul li a{
@@ -48,22 +48,8 @@ nav ul li a{
     padding: 10px;
 }
 
-nav ul li a::before{
-    content: '';
-    width: 100%;
-    height: 0px;
-    background: #d9f6;
-    position: absolute;
-    z-index: -1;
-    left: 0;
-    bottom: -5px;
-    border-bottom-left-radius: 8px;
-    border-bottom-right-radius: 8px;
-    transition: height 0.5s;
-}
-nav ul li a:hover::before{
-    height: 110px;
-}
+/* here ^ */
+
 /*fix image 3*/
 .gallery{
     padding: 10px;
@@ -90,6 +76,53 @@ nav ul li a:hover::before{
     height: 100%;
     object-fit: cover;
 }
+
+@media screen and (min-width: 566px) {
+    nav ul li a::before{
+        content: '';
+        width: 100%;
+        height: 0px;
+        background: #d9f6;
+        position: absolute;
+        z-index: -1;
+        left: 0;
+        bottom: -5px;
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+        transition: height 0.5s;
+    }
+    nav ul li a:hover::before{
+        height: 110px;
+    }
+
+ }
+
+@media screen and (max-width: 920px) {
+    nav ul li{
+        font-size: 12px;
+    }
+ }
+ @media screen and (max-width: 805px) {
+    nav ul{
+        margin-right: -44px;
+    }
+ }
+ @media screen and (max-width: 565px) {
+    nav .logo{
+        margin-right: 160px;
+    }
+ }
+ @media screen and (max-width: 445px) {
+    nav .logo{
+        margin-right: 150px;
+    }
+ }
+ @media screen and (max-width: 420px) {
+    nav .logo{
+        margin-right: 50px;
+    }
+ }
+
 
 @media(max-width: 560px)
 {
